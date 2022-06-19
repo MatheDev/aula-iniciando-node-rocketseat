@@ -1,5 +1,5 @@
 const os = require('os')     //Common Js utilizado para importar modulos
-
+const log = require('./logger') // exportando a função de um arquivo local
 
 
 
@@ -21,5 +21,7 @@ setInterval(() => {
     console.clear() //Limpa o console antes de mostrar a mensagem
     console.log("=== PC STATS ===");
     console.table(stats)//mostra o resultado em forma de tabela
+    
+    log(`${JSON.stringify(stats)} \n`);
 
 }, 1000)
